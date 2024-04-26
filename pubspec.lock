@@ -168,6 +168,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  sliver_list_separator:
+    dependency: "direct main"
+    description:
+      name: sliver_list_separator
+      sha256: "531c1c72087bc2c4f9b1c6ee19ecf84e8aab0e1e8881a24a06eda34c735e0e86"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.3"
   source_span:
     dependency: transitive
     description:

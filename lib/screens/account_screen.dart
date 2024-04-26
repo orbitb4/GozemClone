@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sliver_list_separator/sliver_list_separator.dart';
 import 'package:carousel_slider/carousel_slider.dart'; // Import du package carousel_slider
 
 class AccountScreen extends StatelessWidget {
@@ -51,6 +52,12 @@ class AccountScreen extends StatelessWidget {
             subtitle: Text("Food, shopping, etc."),
             trailing: Icon(Icons.arrow_forward_ios_outlined),
           ),
+          Divider(
+            height: 10,
+            thickness: 1,
+            color: Colors.grey,
+            indent: 60,
+          ),
           ListTile(
             leading: Image.asset(
               "assets/images/road3.png",
@@ -61,7 +68,14 @@ class AccountScreen extends StatelessWidget {
             subtitle: Text("Transport"),
             trailing: Icon(Icons.arrow_forward_ios_outlined),
           ),
+          Divider(
+            height: 10,
+            thickness: 1,
+            color: Colors.grey,
+            indent: 60,
+          ),
           ListTile(
+
             leading: Image.asset(
               "assets/images/a.png",
               width: 30,
@@ -70,6 +84,12 @@ class AccountScreen extends StatelessWidget {
             title: Text("Mes commandes de coursier"),
             subtitle: Text("Envoie et reception de colis"),
             trailing: Icon(Icons.arrow_forward_ios_outlined),
+          ),
+          Divider(
+            height: 10,
+            thickness: 1,
+            color: Colors.grey,
+            indent: 60,
           ),
           ListTile(
             leading: Image.asset(
@@ -82,7 +102,55 @@ class AccountScreen extends StatelessWidget {
             isThreeLine: true,
             trailing: Icon(Icons.arrow_forward_ios_outlined),
           ),
+          Container(
+            width: 392,
+            height: 10,
+            decoration: BoxDecoration(
+              color: Colors.grey
+            ),
+          ),
+          ListTile(
+            leading: Image.asset(
+              "assets/images/logout.png",
+              width: 30,
+              height: 30,
+            ),
+            title: Text("Déconnexion",
+            style: TextStyle(
+              fontSize: 20.0
+            ),),
+          ),
+          Stack(
+            children: [
+              Positioned(
+
+                  child: IntrinsicHeight(
+                      child: Row(
+                        children: <Widget>[
+                          Column(
+                            children: [
+                              Text("Conditions générales ", style: TextStyle(color: Colors.green),),
+                              Text("d'utilisation", style: TextStyle(color: Colors.green),)
+                            ],
+                          ),
+                          VerticalDivider(color: Colors.green,),
+                          Column(
+                            children: [
+                              Text("Charte de la ", style: TextStyle(color: Colors.green),),
+                              Text("communauté Gozem", style: TextStyle(color: Colors.green),)
+                            ],
+                          ),
+                        ],
+
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      ),
+                  )
+              ),
+            ],
+          ),
+          Text("Version 1.0.0")
         ],
+
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
