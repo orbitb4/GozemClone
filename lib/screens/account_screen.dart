@@ -203,7 +203,7 @@ class AccountScreen extends StatelessWidget {
               Navigator.pushNamed(context, '/page_activite');
               break;
             case 4:
-              Navigator.pushNamed(context, '/page_compte');
+              Navigator.pushNamed(context, '/page_notification');
               break;
           }
         },

@@ -15,33 +15,35 @@ class HomeScreen extends StatelessWidget {
           ),
           centerTitle: true,
           actions: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5),
-              child: SizedBox(
-                width: 60,
-                height: 45,
-                child: Stack(
-                  children: [
-                    Positioned.fill(child: Icon(Icons.notifications)),
-                    Positioned(
-                      child: Container(
-                        width: 15,
-                        height: 15,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle, color: Colors.red),
-                        child: Center(
-                            child: Text(
-                          "8",
-                          style: TextStyle(color: Colors.white),
-                        )),
+            IconButton(
+              icon: Stack(
+                children: [
+                  Image(
+                    image: AssetImage("assets/images/notification.png"),
+                    width: 30,
+                    height: 30,
+                  ),
+                  Positioned(
+                    top: 0,
+                    right: 0,
+                    child: Container(
+                      padding: EdgeInsets.all(2),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.red,
                       ),
-                      right: 15,
-                      top: 5,
-                    )
-                  ],
-                ),
+                      child: Text(
+                        "8",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            )
+              onPressed: () {
+                Navigator.pushNamed(context, '/page_notification');
+              },
+            ),
           ],
           leading: CircleAvatar(
             backgroundImage: AssetImage("assets/images/account1.png"),

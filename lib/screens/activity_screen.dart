@@ -28,7 +28,6 @@ class ActivityScreen extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              Image(image: AssetImage("assets/images/home.png")),
               Column(
                 children: [
                   ListTile(
